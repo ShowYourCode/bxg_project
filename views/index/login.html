@@ -30,9 +30,21 @@
                     <input id="pass" type="password" class="form-control" placeholder="密码"
                     value="123456">
                 </div>
-                <a href="./dashboard.html" type="submit" class="btn btn-lg btn-primary btn-block">登 录</a>
+                <a id="btn" href="javascript:;" type="submit" class="btn btn-lg btn-primary btn-block">登 录</a>
             </form>
         </div>
     </div>
 </body>
+<script src="/homework-bxg/node_modules/requirejs/require.js"></script>
+<script>
+    require.config({
+        baseUrl:'/homework-bxg/node_modules',
+        paths:{
+            jquery:'./jquery/dist/jquery'
+        }
+    })
+    require(['/homework-bxg/assets/js/index/login.js'],function(){
+        // console.log(obj);
+    });
+</script>
 </html>
